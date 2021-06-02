@@ -3,7 +3,7 @@ jdk: openjdk15
 jobs:
   include:
     - script: |
-        for directory in $TRAVIS_BUILD_DIR/Maven*; do
-          cd "$directory"
-          mvn package
-        done
+        # for directory in $TRAVIS_BUILD_DIR/Maven*; do
+        cd "$TRAVIS_BUILD_DIR/MavenTest"
+        mvn package
+        # done
