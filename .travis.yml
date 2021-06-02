@@ -2,5 +2,7 @@ language: java
 jobs:
   include:
     - script: |
-      cd "$TRAVIS_BUILD_DIR/MavenTest"
-      mvn package
+        for directory in $TRAVIS_BUILD_DIR/Maven*; do
+          cd "$directory"
+          mvn package
+        done
