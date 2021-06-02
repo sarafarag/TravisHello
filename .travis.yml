@@ -1,4 +1,6 @@
 language: java
 jobs:
   include:
-    - script: mvn package
+    - script: |
+      cd "$TRAVIS_BUILD_DIR/MavenTest"
+      mvn package
